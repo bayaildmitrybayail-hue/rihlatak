@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="رحلتك - ابحث عن تذاكر طيران بأسعار مخفضة وقارن عروض الرحلات بسهولة.">
+<title>رحلتك | تذاكر طيران بأسعار مخفضة</title>
+<style>
+:root{--navy:#10243e;--blue:#246bfd;--cyan:#dff6ff;--gold:#ffbd59;--ink:#17253a;--muted:#718096;--bg:#f5f8fc;--white:#fff;--line:#e5ebf3;--green:#11835b}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Tahoma,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.7}button,input,select{font:inherit}button,a{cursor:pointer}a{text-decoration:none;color:inherit}.container{width:min(1160px,92%);margin:auto}
+header{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:10}.nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}.logo{font-weight:900;font-size:25px;color:var(--navy);display:flex;align-items:center;gap:9px}.logo-mark{display:grid;place-items:center;background:var(--blue);color:#fff;border-radius:13px;width:42px;height:42px;font-size:22px;transform:rotate(-7deg)}.navlinks{display:flex;gap:27px;color:#506078;font-size:14px}.navlinks a:hover{color:var(--blue)}.nav-cta{background:var(--navy);color:white;padding:11px 18px;border-radius:12px;font-weight:bold;border:0}
+.hero{background:linear-gradient(120deg,#10243e 0%,#173f70 58%,#246bfd 100%);color:white;position:relative;overflow:hidden;padding:65px 0 118px}.hero:before,.hero:after{content:"";position:absolute;border:1px solid #ffffff22;border-radius:50%;width:430px;height:430px;left:-120px;top:-180px}.hero:after{width:290px;height:290px;left:80px;top:-100px}.hero-content{position:relative;z-index:1;max-width:720px}.eyebrow{display:inline-flex;align-items:center;gap:8px;color:#d8e8ff;background:#ffffff16;border:1px solid #ffffff2b;padding:7px 13px;border-radius:99px;font-size:13px}.hero h1{font-size:clamp(34px,5vw,54px);line-height:1.25;margin:20px 0 14px;max-width:650px}.hero p{color:#d4e1f2;font-size:17px;max-width:590px;margin:0}.hero-stats{display:flex;gap:28px;margin-top:28px;color:#e7effb;font-size:13px}.hero-stats strong{display:block;font-size:20px;color:#fff}
+.search-wrap{margin-top:-67px;position:relative;z-index:3}.search-card{background:#fff;border-radius:22px;padding:24px;box-shadow:0 18px 50px #10243e18;border:1px solid #edf1f7}.trip-types{display:flex;gap:20px;margin-bottom:20px;font-size:14px;color:#596981}.trip-types label{display:flex;gap:7px;align-items:center;cursor:pointer}.trip-types input{accent-color:var(--blue)}.form-grid{display:grid;grid-template-columns:1.2fr 1.2fr 1fr 1fr .9fr;gap:12px}.field{min-width:0}.field label{display:block;font-size:12px;color:var(--muted);margin:0 0 6px 3px}.field input,.field select{width:100%;min-width:0;background:#f8fafd;border:1px solid #e4eaf3;border-radius:12px;padding:13px 11px;color:var(--ink);outline:none}.field input:focus,.field select:focus{border-color:var(--blue);box-shadow:0 0 0 3px #246bfd18}.search-btn{align-self:end;border:0;background:var(--blue);color:white;border-radius:12px;padding:13px 16px;font-weight:bold;box-shadow:0 8px 18px #246bfd30}.search-btn:hover{background:#1459e8}
+.section{padding:62px 0}.section-head{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:24px}.section-head h2{font-size:28px;color:var(--navy);margin:0 0 5px}.section-head p{color:var(--muted);margin:0;font-size:14px}.text-link{color:var(--blue);font-weight:bold;font-size:14px}.deals{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.deal{background:white;border:1px solid var(--line);border-radius:18px;padding:20px;transition:.2s;position:relative;overflow:hidden}.deal:hover{transform:translateY(-4px);box-shadow:0 12px 28px #10243e0d}.deal-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px}.city-code{font-size:12px;color:var(--muted)}.city-name{font-size:19px;font-weight:bold}.plane-line{display:flex;align-items:center;gap:8px;color:#9aa8ba;flex:1;margin:0 12px}.plane-line span{height:1px;background:#d9e2ee;flex:1;position:relative}.plane-line span:after{content:"✈";position:absolute;left:40%;top:-13px;color:var(--blue);font-size:18px}.deal-bottom{border-top:1px dashed #dce4ef;padding-top:15px;display:flex;align-items:end;justify-content:space-between}.price-label{font-size:12px;color:var(--muted)}.price{font-size:24px;color:var(--navy);font-weight:900}.price small{font-size:12px;font-weight:normal;color:var(--muted)}.discount{font-size:11px;background:#e6f8ef;color:var(--green);border-radius:8px;padding:4px 8px;display:inline-block;margin-bottom:4px}.deal button{border:0;background:#eef4ff;color:var(--blue);border-radius:10px;padding:10px 13px;font-weight:bold}.deal button:hover{background:var(--blue);color:white}
+.benefits{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.benefit-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}.benefit{padding:8px}.benefit-icon{width:48px;height:48px;background:#edf4ff;border-radius:15px;display:grid;place-items:center;font-size:23px;margin-bottom:13px}.benefit h3{margin:0 0 5px;color:var(--navy);font-size:16px}.benefit p{margin:0;color:var(--muted);font-size:13px}
+.results{display:none;padding:28px 0 0}.results.show{display:block}.results-head{display:flex;justify-content:space-between;gap:12px;align-items:center;margin-bottom:14px}.results-head h3{margin:0;color:var(--navy)}.result-list{display:grid;gap:12px}.flight{display:grid;grid-template-columns:1fr 1.4fr .9fr auto;gap:15px;align-items:center;background:#fff;border:1px solid var(--line);padding:18px;border-radius:16px}.airline{font-weight:bold}.airline small{display:block;font-weight:normal;color:var(--muted);font-size:12px}.flight-time{text-align:center}.flight-time strong{font-size:18px}.flight-time small{display:block;color:var(--muted)}.flight-price strong{display:block;font-size:21px;color:var(--navy)}.flight-price small{color:var(--muted)}.book-btn{border:0;background:var(--blue);color:white;border-radius:10px;padding:11px 16px;font-weight:bold}.empty-note{background:#fff8e9;border:1px solid #ffe2a8;padding:14px;border-radius:12px;color:#79591d;font-size:13px;margin-top:12px}
+footer{background:#0c1b2e;color:#dce5f2;padding:36px 0 20px}.footer-main{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap}.footer-brand{max-width:380px}.footer-brand .logo{color:#fff}.footer-brand p{color:#a9b8cb;font-size:13px}.footer-links{display:flex;gap:40px}.footer-links div{display:grid;align-content:start;gap:9px;font-size:13px;color:#b8c6d8}.footer-links strong{color:#fff;margin-bottom:4px}.copyright{border-top:1px solid #ffffff1c;margin-top:28px;padding-top:17px;font-size:12px;color:#9cacc0;display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+.modal{display:none;position:fixed;inset:0;background:#08182dcc;z-index:30;align-items:center;justify-content:center;padding:18px}.modal.open{display:flex}.modal-box{background:#fff;width:min(490px,100%);border-radius:20px;padding:25px;position:relative}.close{position:absolute;left:18px;top:15px;border:0;background:#f0f4fa;border-radius:9px;width:34px;height:34px;font-size:20px}.modal-box h2{margin:0 0 7px;color:var(--navy)}.modal-box p{color:var(--muted);font-size:13px}.modal-form{display:grid;gap:12px}.modal-form input{width:100%;border:1px solid var(--line);background:#f8fafd;border-radius:10px;padding:12px}.modal-form button{border:0;border-radius:11px;background:var(--blue);color:#fff;padding:13px;font-weight:bold}.notice{font-size:12px!important;background:#fff6e5;padding:10px;border-radius:10px;color:#765b20!important}
+@media(max-width:900px){.form-grid{grid-template-columns:repeat(2,1fr)}.search-btn{grid-column:span 2}.deals{grid-template-columns:repeat(2,1fr)}.benefit-grid{grid-template-columns:repeat(2,1fr)}.flight{grid-template-columns:1fr 1fr}.flight-price{grid-column:1}.book-btn{grid-column:2;grid-row:2}.navlinks{gap:13px}}
+@media(max-width:600px){.nav{height:66px}.navlinks{display:none}.nav-cta{padding:9px 12px;font-size:12px}.logo{font-size:21px}.hero{padding:48px 0 100px}.hero p{font-size:15px}.hero-stats{gap:15px}.hero-stats strong{font-size:17px}.search-card{padding:17px;border-radius:17px}.form-grid{grid-template-columns:1fr 1fr;gap:10px}.field input,.field select{padding:12px 8px;font-size:13px}.section{padding:45px 0}.section-head h2{font-size:23px}.deals{grid-template-columns:1fr}.benefit-grid{grid-template-columns:1fr 1fr;gap:14px}.benefit{padding:0}.flight{gap:10px;padding:14px}.flight-time strong{font-size:15px}.flight-price strong{font-size:18px}.book-btn{padding:10px;font-size:12px}.footer-links{gap:22px}.trip-types{gap:12px;font-size:12px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="container nav">
+    <a class="logo" href="#"><span class="logo-mark">✈</span><span>رحلتك</span></a>
+    <nav class="navlinks"><a href="#search">احجز رحلتك</a><a href="#deals">أفضل العروض</a><a href="#why">لماذا رحلتك؟</a></nav>
+    <button class="nav-cta" onclick="document.getElementById('search').scrollIntoView({behavior:'smooth'})">ابحث عن رحلة ←</button>
+  </div>
+</header>
+<main>
+<section class="hero">
+  <div class="container hero-content">
+    <span class="eyebrow">✦ عروض سفر تستحق الاكتشاف</span>
+    <h1>العالم أقرب مما تتخيل،<br>وبسعر يناسبك.</h1>
+    <p>قارن خيارات السفر، اكتشف عروض التذاكر، وخطط لرحلتك القادمة بكل سهولة من مكان واحد.</p>
+    <div class="hero-stats"><div><strong>وجهات متنوعة</strong>خيارات تناسب خطتك</div><div><strong>بحث سهل</strong>خطوات واضحة وسريعة</div><div><strong>عروض مميزة</strong>اكتشف السعر المناسب</div></div>
+  </div>
+</section>
+
+<section class="container search-wrap" id="search">
+  <div class="search-card">
+    <div class="trip-types">
+      <label><input type="radio" name="tripType" value="round" checked> ذهاب وعودة</label>
+      <label><input type="radio" name="tripType" value="oneway"> ذهاب فقط</label>
+    </div>
+    <form id="searchForm">
+      <div class="form-grid">
+        <div class="field"><label for="from">مدينة المغادرة</label><input id="from" list="cities" placeholder="مثال: الخرطوم" required></div>
+        <div class="field"><label for="to">الوجهة</label><input id="to" list="cities" placeholder="إلى أين تريد السفر؟" required></div>
+        <datalist id="cities"><option value="الخرطوم"><option value="القاهرة"><option value="جدة"><option value="الرياض"><option value="دبي"><option value="إسطنبول"><option value="الدوحة"><option value="أديس أبابا"><option value="نيروبي"><option value="القاهرة"></datalist>
+        <div class="field"><label for="depart">تاريخ الذهاب</label><input type="date" id="depart" required></div>
+        <div class="field" id="returnField"><label for="return">تاريخ العودة</label><input type="date" id="return"></div>
+        <div class="field"><label for="passengers">المسافرون</label><select id="passengers"><option value="1">مسافر واحد</option><option value="2">مسافران</option><option value="3">3 مسافرين</option><option value="4">4 مسافرين</option><option value="5">5 مسافرين</option><option value="6">6 مسافرين</option></select></div>
+        <button class="search-btn" type="submit">⌕ ابحث عن الرحلات</button>
+      </div>
+    </form>
+    <div class="results" id="results">
+      <div class="results-head"><h3 id="resultsTitle">الرحلات المقترحة</h3><span style="font-size:12px;color:#718096">أسعار تجريبية للعرض</span></div>
+      <div class="result-list" id="resultList"></div>
+      <div class="empty-note">تنبيه: هذه نسخة تجريبية تعرض نتائج وأسعارًا توضيحية فقط، وليست متصلة بأنظمة شركات الطيران أو بحجز حقيقي.</div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="deals">
+  <div class="container">
+    <div class="section-head"><div><h2>وجهات عليها الكلام ✨</h2><p>ابدأ التخطيط لرحلتك القادمة مع هذه الوجهات المقترحة.</p></div><a class="text-link" href="#search">اعثر على رحلتك ←</a></div>
+    <div class="deals">
+      <article class="deal"><div class="deal-top"><div><div class="city-code">من الخرطوم إلى</div><div class="city-name">القاهرة 🇪🇬</div></div><div class="discount">عرض مقترح</div></div><div class="deal-top"><div class="plane-line">✈ <span></span> ✦</div><div style="font-size:12px;color:#718096">رحلة قصيرة</div></div><div class="deal-bottom"><div><div class="price-label">سعر يبدأ من</div><div class="price">— <small>يُحدّد عند البحث</small></div></div><button onclick="setDestination('القاهرة')">استكشف الرحلات</button></div></article>
+      <article class="deal"><div class="deal-top"><div><div class="city-code">من الخرطوم إلى</div><div class="city-name">جدة 🇸🇦</div></div><div class="discount">وجهة محبوبة</div></div><div class="deal-top"><div class="plane-line">✈ <span></span> ✦</div><div style="font-size:12px;color:#718096">زيارة وعمل</div></div><div class="deal-bottom"><div><div class="price-label">سعر يبدأ من</div><div class="price">— <small>يُحدّد عند البحث</small></div></div><button onclick="setDestination('جدة')">استكشف الرحلات</button></div></article>
+      <article class="deal"><div class="deal-top"><div><div class="city-code">من الخرطوم إلى</div><div class="city-name">دبي 🇦🇪</div></div><div class="discount">اكتشف الوجهة</div></div><div class="deal-top"><div class="plane-line">✈ <span></span> ✦</div><div style="font-size:12px;color:#718096">تجربة جديدة</div></div><div class="deal-bottom"><div><div class="price-label">سعر يبدأ من</div><div class="price">— <small>يُحدّد عند البحث</small></div></div><button onclick="setDestination('دبي')">استكشف الرحلات</button></div></article>
+    </div>
+  </div>
+</section>
+
+<section class="section benefits" id="why">
+  <div class="container">
+    <div class="section-head"><div><h2>السفر يبدأ براحة البال</h2><p>صممنا تجربة بسيطة تساعدك على التخطيط بثقة.</p></div></div>
+    <div class="benefit-grid">
+      <div class="benefit"><div class="benefit-icon">🔎</div><h3>بحث سهل</h3><p>أدخل وجهتك وتواريخك لتبدأ استكشاف الخيارات.</p></div>
+      <div class="benefit"><div class="benefit-icon">💸</div><h3>قارن الخيارات</h3><p>راجع الأسعار والتفاصيل قبل اتخاذ قرارك.</p></div>
+      <div class="benefit"><div class="benefit-icon">🧭</div><h3>وجهات متعددة</h3><p>اكتشف وجهات جديدة لرحلات العمل أو الإجازة.</p></div>
+      <div class="benefit"><div class="benefit-icon">🤝</div><h3>معلومات واضحة</h3><p>اعرف تفاصيل الرحلة وما تحتاج إليه قبل الحجز.</p></div>
+    </div>
+  </div>
+</section>
+</main>
+<footer>
+  <div class="container">
+    <div class="footer-main">
+      <div class="footer-brand"><a class="logo" href="#"><span class="logo-mark">✈</span><span>رحلتك</span></a><p>مساحتك لاكتشاف خيارات السفر والتخطيط لرحلتك القادمة. نعمل على جعل تجربة البحث عن تذاكر الطيران أسهل وأوضح.</p></div>
+      <div class="footer-links"><div><strong>استكشف</strong><a href="#search">البحث عن رحلة</a><a href="#deals">العروض</a><a href="#why">مميزاتنا</a></div><div><strong>مساعدة</strong><a href="#search">طريقة البحث</a><a href="mailto:hello@rihlatak.example">تواصل معنا</a></div></div>
+    </div>
+    <div class="copyright"><span>© 2026 رحلتك — نموذج أولي للموقع.</span><span>الأسعار والحجوزات غير فعلية في هذه النسخة.</span></div>
+  </div>
+</footer>
+
+<div class="modal" id="bookingModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+  <div class="modal-box"><button class="close" onclick="closeModal()" aria-label="إغلاق">×</button><h2 id="modalTitle">طلب تفاصيل الرحلة</h2><p id="modalSummary">أدخل بيانات التواصل ليظهر لك شكل خطوة الحجز.</p><form class="modal-form" id="bookingForm"><input id="customerName" placeholder="الاسم الكامل" required><input id="customerEmail" type="email" placeholder="البريد الإلكتروني" required><input id="customerPhone" type="tel" placeholder="رقم الهاتف (اختياري)"><button type="submit">إرسال طلب تجريبي</button></form><p class="notice">لن يتم إرسال بياناتك إلى أي جهة. هذه واجهة تجريبية فقط ولا تنشئ حجزًا أو تذكرة حقيقية.</p></div>
+</div>
+<script>
+const today = new Date();
+const iso = d => {const x = new Date(d.getTime()-d.getTimezoneOffset()*60000); return x.toISOString().slice(0,10)};
+document.getElementById('depart').min = iso(today);
+document.getElementById('depart').value = iso(today);
+const tomorrow = new Date(today); tomorrow.setDate(tomorrow.getDate()+7);
+document.getElementById('return').min = iso(today);
+document.getElementById('return').value = iso(tomorrow);
+document.querySelectorAll('input[name="tripType"]').forEach(r=>r.addEventListener('change',()=>{
+  const oneWay = document.querySelector('input[name="tripType"]:checked').value === 'oneway';
+  document.getElementById('returnField').style.display = oneWay ? 'none' : 'block';
+  document.getElementById('return').required = !oneWay;
+}));
+document.getElementById('depart').addEventListener('change',()=>{
+  const dep = document.getElementById('depart').value;
+  document.getElementById('return').min = dep;
+  if(document.getElementById('return').value < dep) document.getElementById('return').value = dep;
+});
+function setDestination(city){
+  document.getElementById('from').value='الخرطوم';
+  document.getElementById('to').value=city;
+  document.getElementById('search').scrollIntoView({behavior:'smooth'});
+  document.getElementById('to').focus();
+}
+const sampleFlights=[
+ {airline:'الخطوط الجوية — مثال',code:'EX 204',depart:'08:30',arrive:'10:00',duration:'1 س 30 د',price:245},
+ {airline:'طيران — مثال',code:'EX 118',depart:'13:15',arrive:'15:05',duration:'1 س 50 د',price:289},
+ {airline:'رحلات — مثال',code:'EX 730',depart:'19:40',arrive:'21:10',duration:'1 س 30 د',price:315}
+];
+let selectedFlight=null;
+document.getElementById('searchForm').addEventListener('submit',e=>{
+ e.preventDefault();
+ const from=document.getElementById('from').value.trim(), to=document.getElementById('to').value.trim();
+ if(from.toLowerCase()===to.toLowerCase()){alert('اختر مدينتين مختلفتين للمغادرة والوصول.');return;}
+ const date=document.getElementById('depart').value;
+ const passengers=Number(document.getElementById('passengers').value);
+ document.getElementById('resultsTitle').textContent=`رحلات مقترحة من ${from} إلى ${to}`;
+ document.getElementById('resultList').innerHTML=sampleFlights.map((f,i)=>`
+ <article class="flight">
+  <div class="airline">✈ ${f.airline}<small>${f.code} · ${date}</small></div>
+  <div class="flight-time"><strong>${f.depart} ─ ${f.arrive}</strong><small>${f.duration} · مباشر (مثال)</small></div>
+  <div class="flight-price"><strong>${(f.price*passengers).toLocaleString('en-US')} USD</strong><small>لـ ${passengers} مسافر · سعر توضيحي</small></div>
+  <button class="book-btn" onclick="openBooking(${i})">اختيار الرحلة</button>
+ </article>`).join('');
+ document.getElementById('results').classList.add('show');
+ document.getElementById('results').scrollIntoView({behavior:'smooth',block:'nearest'});
+});
+function openBooking(i){
+ selectedFlight=sampleFlights[i];
+ const from=document.getElementById('from').value, to=document.getElementById('to').value;
+ document.getElementById('modalSummary').textContent=`${from} إلى ${to} · ${selectedFlight.depart}–${selectedFlight.arrive} · السعر المعروض تجريبي وغير قابل للدفع.`;
+ document.getElementById('bookingModal').classList.add('open');
+}
+function closeModal(){document.getElementById('bookingModal').classList.remove('open')}
+document.getElementById('bookingModal').addEventListener('click',e=>{if(e.target.id==='bookingModal')closeModal()});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal()});
+document.getElementById('bookingForm').addEventListener('submit',e=>{
+ e.preventDefault();
+ alert('نجح الاختبار التجريبي للواجهة فقط. لم يتم إرسال البيانات أو إنشاء حجز حقيقي.');
+ closeModal();
+});
+</script>
+</body>
+</html>
